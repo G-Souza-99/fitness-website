@@ -1,0 +1,27 @@
+.product-page {
+  padding: 50px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten(#ffcc00, 10%);
+    }
+  }
+}

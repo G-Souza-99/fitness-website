@@ -1,0 +1,87 @@
+/* src/styles/themes.scss */
+
+/* Light Theme Variables */
+:root {
+  /* Base Colors */
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --heading-color: #333333;
+  --primary-color: #ff5722; /* Accent color */
+  --link-hover-color: #ff5722;
+  --error-color: #e53935;
+
+  /* Navigation */
+  --nav-background-color: #ffffff;
+  --nav-text-color: #333333;
+  --nav-text-color-inverse: #ffffff;
+  --nav-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Buttons */
+  --button-background-color: #ffcc00; /* Yellow */
+  --button-hover-color: #ffd633;      /* Lighter Yellow */
+  --button-text-color: #000000;       /* Black */
+
+  /* Inputs */
+  --input-border-color: #cccccc;
+  --input-background-color: #ffffff;
+
+  /* Cards */
+  --card-background-color: #f9f9f9;
+  --card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --card-hover-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  --card-hover-background-color: #ffffff;
+
+  /* Sections */
+  --section-background-color: #ffffff;
+
+  /* Footer */
+  --footer-background-color: #333333;
+  --footer-text-color: #ffffff;
+
+  /* Hero Section */
+  --hero-overlay-color: rgba(0, 0, 0, 0.5);
+  --hero-text-color: #ffffff;
+}
+
+/* Dark Theme Variables */
+[data-theme='dark'] {
+  /* Base Colors */
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --heading-color: #ffffff;
+  --primary-color: #bb86fc; /* Accent color */
+  --link-hover-color: #bb86fc;
+  --error-color: #ef9a9a;
+
+  /* Navigation */
+  --nav-background-color: #1f1f1f;
+  --nav-text-color: #ffffff;
+  --nav-text-color-inverse: #121212;
+  --nav-box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+
+  /* Buttons */
+  --button-background-color: #bb86fc; /* Light Purple */
+  --button-hover-color: #9a67ea;      /* Darker Purple */
+  --button-text-color: #ffffff;       /* White */
+
+  /* Inputs */
+  --input-border-color: #555555;
+  --input-background-color: #2c2c2c;
+
+  /* Cards */
+  --card-background-color: #1e1e1e;
+  --card-box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  --card-hover-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
+  --card-hover-background-color: #2a2a2a;
+
+  /* Sections */
+  --section-background-color: #1f1f1f;
+
+  /* Footer */
+  --footer-background-color: #1f1f1f;
+  --footer-text-color: #ffffff;
+
+  /* Hero Section */
+  --hero-overlay-color: rgba(0, 0, 0, 0.7);
+  --hero-text-color: #ffffff;
+}
