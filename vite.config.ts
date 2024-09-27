@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: './index.html',
-        404: './404.html',
+        main: 'index.html',
+        404: './public/404.html',
       },
     },
   },
