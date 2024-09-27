@@ -44,3 +44,9 @@ button {
 button:hover {
   background-color: var(--button-hover-color);
 }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
