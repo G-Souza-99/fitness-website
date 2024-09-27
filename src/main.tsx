@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'; // Import from 'react-dom/client'
 import App from './App';
 import { CartProvider } from './contexts/CartContext';
 import { ThemeProvider } from './contexts/ThemeContext';
-import '@fortawesome/fontawesome-free/css/all.css';
 import './App.scss';
 
 const container = document.getElementById('root');

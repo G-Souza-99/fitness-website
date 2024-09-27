@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 .product-page {
   padding: 50px;
   text-align: center;
@@ -21,7 +23,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: lighten(#ffcc00, 10%);
+      background-color: color.adjust(#ffcc00, $lightness: 10%);
     }
   }
 }
