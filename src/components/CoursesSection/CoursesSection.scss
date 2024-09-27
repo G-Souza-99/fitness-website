@@ -16,10 +16,11 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 20px;
   }
 
   .course-card {
-    width: 30%;
+    width: 29.99%;
     background-color: var(--card-background-color);
     padding: 20px;
     margin-bottom: 20px;

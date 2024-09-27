@@ -1,18 +1,26 @@
+// src/components/TestimonialsSection/TestimonialsSection.tsx
+
+import React from 'react';
 import './TestimonialsSection.scss';
 import client1 from '../../assets/images/client1.jpg';
 import client2 from '../../assets/images/client2.jpg';
 
 const testimonials = [
   {
-    name: 'Client 1',
+    name: 'Emily Johnson',
     feedback: 'Amazing experience, highly recommended!',
     image: client1,
   },
   {
-    name: 'Client 2',
+    name: 'Michael Smith',
     feedback: 'The best training program I have ever done!',
     image: client2,
   },
+  {
+    name: 'Meghan Scott',
+    feedback: 'Amazing experience, highly recommended!',
+    image: client1,
+  }
 ];
 
 const TestimonialsSection: React.FC = () => {
@@ -23,7 +31,7 @@ const TestimonialsSection: React.FC = () => {
         {testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-card">
             <img src={testimonial.image} alt={testimonial.name} />
-            <p>{testimonial.feedback}</p>
+            <p>"{testimonial.feedback}"</p>
             <h3>{testimonial.name}</h3>
           </div>
         ))}
