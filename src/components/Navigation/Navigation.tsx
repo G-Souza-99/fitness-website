@@ -4,7 +4,7 @@ import { CartContext } from '../../contexts/CartContext';
 import './Navigation.scss';
 import { NavLink } from 'react-router-dom';
 
-import logo from '../../assets/images/logo.jpg';
+import logo from '../../assets/images/logo2.png';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 const Navigation: React.FC = () => {
