@@ -5,6 +5,7 @@ import CoursesSection from '../CoursesSection/CoursesSection';
 import TestimonialsSection from '../TestimonialsSection/TestimonialsSection';
 import ContactSection from '../ContactSection/ContactSection';
 import Footer from '../Footer/Footer';
+import './HomePage.scss';
 
 const HomePage: React.FC = () => {
   return (

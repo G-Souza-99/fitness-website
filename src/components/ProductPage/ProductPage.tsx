@@ -1,18 +1,60 @@
+// src/components/ProductPage/ProductPage.tsx
+
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import './ProductPage.scss'; // You can style this page separately
+import { CartContext } from '../../contexts/CartContext';
+import './ProductPage.scss';
+
+const productData = [
+  {
+    id: 'product-1',
+    name: 'Fitness Course 1',
+    description: 'An amazing fitness course to get you in shape.',
+    price: 49.99,
+    image: '/assets/images/course1.jpg',
+  },
+  // Add more product data as needed
+];
 
 const ProductPage: React.FC = () => {
-  const { productName } = useParams<{ productName: string }>(); // Get product name from URL
+  const { productName } = useParams<{ productName: string }>();
+  const cartContext = useContext(CartContext);
 
-  // Here you could fetch more data based on `productName` if needed.
-  // For now, let's just display the product name.
+  if (!cartContext) {
+    return <div>Loading...</div>;
+  }
+
+  const { addToCart } = cartContext;
+
+  const product = productData.find(
+    (p) => p.id === productName
+  );
+
+  if (!product) {
+    return <div>Product not found.</div>;
+  }
+
+  const handleAddToCart = () => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: 1,
+    });
+  };
 
   return (
-    <section className="product-page">
-      <h1>{productName?.replace(/-/g, ' ')}</h1> {/* Replace dashes with spaces */}
-      <p>Welcome to the {productName} course! This page could display more detailed information about the product.</p>
-      <button className="cta-button">Purchase</button> {/* Add purchase functionality later */}
-    </section>
+    <div className="product-page">
+      <div className="product-image">
+        <img src={product.image} alt={product.name} />
+      </div>
+      <div className="product-details">
+        <h1>{product.name}</h1>
+        <p className="price">${product.price.toFixed(2)}</p>
+        <p>{product.description}</p>
+        <button className="cta-button" onClick={handleAddToCart}>Add to Cart</button>
+      </div>
+    </div>
   );
 };
 

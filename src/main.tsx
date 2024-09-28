@@ -4,6 +4,7 @@ import App from './App';
 import { CartProvider } from './contexts/CartContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import './App.scss';
+import './fontAwsome';
 
 const container = document.getElementById('root');
 

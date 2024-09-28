@@ -1,0 +1,48 @@
+/* src/components/ServicePage/ServicePage.scss */
+
+.service-page {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  .service-image {
+    flex: 1 1 50%;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+
+  .service-details {
+    flex: 1 1 50%;
+    padding: 20px;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--heading-color);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .service-image,
+    .service-details {
+      flex: 1 1 100%;
+    }
+
+    .service-details {
+      padding: 0;
+    }
+  }
+}

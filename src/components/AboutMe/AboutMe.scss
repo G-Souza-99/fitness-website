@@ -1,0 +1,203 @@
+/* src/components/AboutMe/AboutMe.scss */
+
+.about-me-page {
+  padding: 100px 50px 50px 50px; /* Adjust padding to account for fixed navigation */
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  .profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .profile-pic {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 50px;
+      box-shadow: var(--card-box-shadow);
+    }
+
+    .profile-info {
+      max-width: 600px;
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: var(--heading-color);
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+
+        a {
+          font-size: 1.5rem;
+          color: var(--primary-color);
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: var(--link-hover-color);
+          }
+
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .experience-section {
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--heading-color);
+      text-align: center;
+    }
+
+    .experience-item {
+      background-color: var(--card-background-color);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: var(--card-box-shadow);
+      transition: box-shadow 0.3s ease;
+
+      &:hover {
+        box-shadow: var(--card-hover-box-shadow);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--text-color);
+      }
+
+      p {
+        font-size: 1rem;
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .skills-section {
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--heading-color);
+      text-align: center;
+    }
+
+    .skills-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+
+      li {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        padding: 10px;
+        background-color: var(--card-background-color);
+        border-radius: 5px;
+        box-shadow: var(--card-box-shadow);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          background-color: var(--card-hover-background-color);
+          box-shadow: var(--card-hover-box-shadow);
+        }
+
+        .skill-icon {
+          margin-right: 10px;
+          color: var(--primary-color);
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .contact-section {
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--heading-color);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .contact-button {
+      background-color: var(--button-background-color);
+      color: var(--button-text-color);
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: var(--button-hover-color);
+      }
+    }
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .profile-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .profile-info {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 80px 20px 20px 20px;
+
+    .skills-section .skills-list {
+      grid-template-columns: 1fr;
+    }
+
+    .experience-section .experience-item {
+      padding: 15px;
+    }
+
+    .profile-section .profile-pic {
+      width: 200px;
+      height: 200px;
+    }
+
+    .contact-section .contact-button {
+      padding: 12px 25px;
+      font-size: 1rem;
+    }
+  }
+}

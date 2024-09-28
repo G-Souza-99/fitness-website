@@ -2,15 +2,14 @@
 
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Suspense, lazy, useEffect } from 'react';
-
-import ProductPage from './components/ProductPage/ProductPage';
-import ServicePage from './components/ServicePage/ServicePage';
-import CartPage from './components/CartPage/CartPage';
-import AboutMe from './components/AboutMe/AboutMe';
-import CheckoutPage from './components/CheckoutPage/CheckoutPage';
 import Navigation from './components/Navigation/Navigation';
 
 const HomePage = lazy(() => import('./components/HomePage/HomePage'));
+const AboutMe = lazy(() => import('./components/AboutMe/AboutMe'));
+const ProductPage = lazy(() => import('./components/ProductPage/ProductPage'));
+const ServicePage = lazy(() => import('./components/ServicePage/ServicePage'));
+const CartPage = lazy(() => import('./components/CartPage/CartPage'));
+const CheckoutPage = lazy(() => import('./components/CheckoutPage/CheckoutPage'));
 
 function App() {
   useEffect(() => {
