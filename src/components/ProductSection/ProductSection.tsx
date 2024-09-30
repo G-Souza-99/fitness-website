@@ -1,6 +1,7 @@
 // src/components/ProductSection/ProductSection.tsx
 
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import './ProductSection.scss';
 import { CartContext } from '../../contexts/CartContext';
 import { CartItem } from '../../types/CartItem';
@@ -32,16 +33,18 @@ const ProductSection: React.FC<ProductSectionProps> = ({ product }) => {
 
   return (
     <div className="product-card">
-      <div className="image-container">
-        <img src={product.image} alt={product.title} />
-      </div>
-      <div className="product-info">
-        <h2>{product.title}</h2>
-        <p className="price">€{product.price.toFixed(2)}</p> {/* Format price */}
-        <button className="add-to-cart-btn" onClick={handleAddToCart}>
-          Add to Cart
-        </button>
-      </div>
+      <Link to={`/product/${product.id}`} className="product-link">
+        <div className="image-container">
+          <img src={product.image} alt={product.title} />
+        </div>
+        <div className="product-info">
+          <h2>{product.title}</h2>
+          <p className="price">€{product.price.toFixed(2)}</p>
+        </div>
+      </Link>
+      <button className="add-to-cart-btn" onClick={handleAddToCart}>
+        Add to Cart
+      </button>
     </div>
   );
 };

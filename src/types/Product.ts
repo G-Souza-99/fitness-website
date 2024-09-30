@@ -3,7 +3,8 @@
 export interface Product {
   id: number;
   title: string;
-  price: number; // Changed from string to number
+  price: number; // Ensured as number
   image: string;
   category: string;
+  description: string; // New field added
 }

@@ -39,7 +39,7 @@ function App() {
           <Route path="/about-me" element={<AboutMe />} />
 
           {/* Product Pages */}
-          <Route path="/product/:productName" element={<ProductPage />} />
+          <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/product" element={<Navigate to="/" />} />
 
           {/* Service Pages */}
