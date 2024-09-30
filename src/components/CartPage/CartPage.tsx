@@ -29,7 +29,7 @@ const CartPage: React.FC = () => {
   const calculateTotal = () => {
     return cartItems
       .reduce((total, item) => {
-        const numericPrice = parseFloat(item.price.replace('€', '').replace(',', '.'));
+        const numericPrice = item.price;
         return total + numericPrice * item.quantity;
       }, 0)
       .toFixed(2);

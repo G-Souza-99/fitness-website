@@ -13,6 +13,7 @@ const CheckoutPage: React.FC = () => {
 
   const { cartItems } = cartContext;
 
+  // Calculate total price
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
     0
@@ -30,15 +31,15 @@ const CheckoutPage: React.FC = () => {
           <ul>
             {cartItems.map((item) => (
               <li key={item.id}>
-                <span>{item.name} x {item.quantity}</span>
-                <span>${(item.price * item.quantity).toFixed(2)}</span>
+                <span>{item.title} x {item.quantity}</span> {/* Changed 'name' to 'title' */}
+                <span>€{(item.price * item.quantity).toFixed(2)}</span> {/* Ensure price is number */}
               </li>
             ))}
           </ul>
         )}
         <div className="total">
           <span>Total:</span>
-          <span>${totalPrice.toFixed(2)}</span>
+          <span>€{totalPrice.toFixed(2)}</span>
         </div>
       </div>
 

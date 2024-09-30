@@ -31,7 +31,7 @@ const StorePage: React.FC = () => {
   // Function to filter products by price range
   const handlePriceFilter = () => {
     const filtered = products.filter((product) => {
-      const productPrice = parseFloat(product.price.replace('€', '').replace(',', '.'));
+      const productPrice = product.price;
       const withinPrice = productPrice >= minPrice && productPrice <= maxPrice;
       const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
       return withinPrice && matchesCategory;

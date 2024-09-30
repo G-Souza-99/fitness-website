@@ -11,21 +11,21 @@ export const products: Product[] = [
   {
     id: 1,
     title: 'Fitness Gear',
-    price: '€20,00',
+    price: 20.0, // Changed from '€20,00' to 20.0
     image: product1,
     category: 'Equipamento de Treino',
   },
   {
     id: 2,
     title: 'Nutritional Supplements',
-    price: '€15,00',
+    price: 15.0, // Changed from '€15,00' to 15.0
     image: product2,
     category: 'Alimentação',
   },
   {
     id: 3,
     title: 'Workout Apparel',
-    price: '€30,00',
+    price: 30.0, // Changed from '€30,00' to 30.0
     image: product3,
     category: 'Equipamento de Treino',
   },

@@ -37,7 +37,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({ product }) => {
       </div>
       <div className="product-info">
         <h2>{product.title}</h2>
-        <p className="price">{product.price}</p>
+        <p className="price">€{product.price.toFixed(2)}</p> {/* Format price */}
         <button className="add-to-cart-btn" onClick={handleAddToCart}>
           Add to Cart
         </button>
