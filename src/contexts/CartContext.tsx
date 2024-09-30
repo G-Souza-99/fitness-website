@@ -1,17 +1,27 @@
-import React, { createContext, useState } from 'react';
+// src/contexts/CartContext.tsx
+
+import React, { createContext, useState, useEffect } from 'react';
 import { CartItem } from '../types/CartItem';
 
 interface CartContextProps {
   cartItems: CartItem[];
   addToCart: (item: CartItem) => void;
-  removeFromCart: (id: string) => void;
-  updateQuantity: (id: string, quantity: number) => void;
+  removeFromCart: (id: number) => void;
+  updateQuantity: (id: number, quantity: number) => void;
 }
 
-export const CartContext = createContext<CartContextProps | null>(null);
+export const CartContext = createContext<CartContextProps | undefined>(undefined);
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>(() => {
+    const storedCart = localStorage.getItem('cartItems');
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+  
+
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addToCart = (item: CartItem) => {
     const existingItem = cartItems.find((i) => i.id === item.id);
@@ -26,11 +36,11 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
-  const removeFromCart = (id: string) => {
+  const removeFromCart = (id: number) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
   };
 
-  const updateQuantity = (id: string, quantity: number) => {
+  const updateQuantity = (id: number, quantity: number) => {
     if (quantity <= 0) {
       removeFromCart(id);
     } else {

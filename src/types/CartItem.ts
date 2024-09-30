@@ -1,7 +1,11 @@
-export interface CartItem {
-  id: string;
-  name: string;
-  price: number;
+// src/types/CartItem.ts
+import { Product } from './Product';
+
+export interface CartItem extends Product {
+  id: number;
+  title: string;
+  price: string;
+  image: string;
   quantity: number;
-  // Add other properties as needed
+  category: string;
 }

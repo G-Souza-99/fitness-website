@@ -1,12 +1,24 @@
-// src/components/AboutMe/AboutMe.tsx
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom'; // Using useNavigate
 import './AboutMe.scss';
-import profilePic from '../../assets/images/hero-bg2.jpg'; // Ensure you have a profile image in this path
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Assuming you're using FontAwesome icons
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import bannerImage from '../../assets/images/about-me.jpg'; // Replace with correct image path
+import profilePic1 from '../../assets/images/group-training.jpg'; // Replace with correct image path
+import profilePic2 from '../../assets/images/group-training.jpg'; // Replace with correct image path
 
 const AboutMe: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    if (window.history.state && window.history.state.idx > 0) {
+      navigate(-1); // Go back in the browser history
+    } else {
+      navigate('/'); // Redirect to home if no previous page
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -17,96 +29,47 @@ const AboutMe: React.FC = () => {
         />
       </Helmet>
       
-      <div className="about-me-page">
-        <div className="profile-section">
-          <img src={profilePic} alt="Luis Nicolau" className="profile-pic" />
-          <div className="profile-info">
-            <h1>About Me</h1>
-            <p>
-              Hi, I'm Luis Nicolau, a certified personal trainer with over 10 years of experience in helping individuals achieve their fitness goals. My mission is to provide personalized training programs that cater to your unique needs and lifestyle.
-            </p>
-            <div className="social-links">
-              <a
-                href="https://www.facebook.com/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FontAwesomeIcon icon={['fab', 'facebook']} />
-              </a>
-              <a
-                href="https://www.instagram.com/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <FontAwesomeIcon icon={['fab', 'instagram']} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <FontAwesomeIcon icon={['fab', 'linkedin']} />
-              </a>
-              {/* Add more social links as needed */}
+      <div className="about-me">
+        <div className="banner">
+          <img src={bannerImage} alt="About Me Banner" className="banner-img" />
+          <div className="about-black-overlay"></div>
+          <div className="banner-text">
+            <div className="heading-with-arrow">
+              <FontAwesomeIcon icon={faArrowLeft} onClick={handleGoBack} className="back-arrow" />
+              <h1>About Me</h1>
             </div>
+            <p>Discover my journey, expertise, and how I can help you achieve your fitness goals.</p>
           </div>
         </div>
 
-        <div className="experience-section">
-          <h2>My Experience</h2>
-          <div className="experience-item">
-            <h3>Certified Personal Trainer</h3>
-            <p>National Academy of Sports Medicine (NASM) - 2012</p>
-          </div>
-          <div className="experience-item">
-            <h3>Strength and Conditioning Specialist</h3>
-            <p>International Sports Sciences Association (ISSA) - 2015</p>
-          </div>
-          <div className="experience-item">
-            <h3>Nutrition Coach</h3>
-            <p>Precision Nutrition - 2018</p>
-          </div>
-          {/* Add more experience items as needed */}
-        </div>
+        <div className="container">
+          <section className="section">
+            <div className="image-content">
+              <img src={profilePic1} alt="Pilates Training" />
+            </div>
+            <div className="text-content">
+              <h2>Pilates</h2>
+              <p>
+                My training in Pilates focuses on mindful bodywork, aligning and activating every muscle structure. 
+                With balanced loads on all muscle groups combined with necessary breathing techniques, I ensure 
+                concentration and precision in every movement.
+              </p>
+            </div>
+          </section>
 
-        <div className="skills-section">
-          <h2>My Skills</h2>
-          <ul className="skills-list">
-            <li>
-              <FontAwesomeIcon icon="check-circle" className="skill-icon" />
-              Personalized Training Programs
-            </li>
-            <li>
-              <FontAwesomeIcon icon="check-circle" className="skill-icon" />
-              Nutrition Planning
-            </li>
-            <li>
-              <FontAwesomeIcon icon="check-circle" className="skill-icon" />
-              Strength Training
-            </li>
-            <li>
-              <FontAwesomeIcon icon="check-circle" className="skill-icon" />
-              Weight Management
-            </li>
-            <li>
-              <FontAwesomeIcon icon="check-circle" className="skill-icon" />
-              Injury Prevention
-            </li>
-            <li>
-              <FontAwesomeIcon icon="check-circle" className="skill-icon" />
-              Online Coaching
-            </li>
-            {/* Add more skills as needed */}
-          </ul>
-        </div>
-
-        <div className="contact-section">
-          <h2>Get in Touch</h2>
-          <p>If you're ready to start your fitness journey or have any questions, feel free to reach out!</p>
-          <a href="/contact" className="contact-button">Contact Me</a>
+          <section className="section">
+            <div className="image-content">
+              <img src={profilePic2} alt="Strength Training" />
+            </div>
+            <div className="text-content">
+              <h2>Aplomb</h2>
+              <p>
+                Aplomb is a training system utilizing resistance bands. These exercises focus on flexibility, strength, and 
+                balancing physical movements to improve body posture and coordination. Aplomb exercises refine motor 
+                skills and enhance overall body strength, which leads to better functional movement.
+              </p>
+            </div>
+          </section>
         </div>
       </div>
     </>

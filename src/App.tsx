@@ -3,6 +3,8 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Suspense, lazy, useEffect } from 'react';
 import Navigation from './components/Navigation/Navigation';
+import StorePage from './components/StorePage/StorePage';
+import { ToastContainer } from 'react-toastify';
 
 const HomePage = lazy(() => import('./components/HomePage/HomePage'));
 const AboutMe = lazy(() => import('./components/AboutMe/AboutMe'));
@@ -45,7 +47,10 @@ function App() {
           <Route path="/service" element={<Navigate to="/" />} />
 
           {/* Cart Page */}
-          <Route path="/mycart" element={<CartPage />} />
+          <Route path="/cart" element={<CartPage />} />
+
+          {/* Cart Page */}
+          <Route path="/store" element={<StorePage />} />
 
           {/* Checkout Page */}
           <Route path="/checkout" element={<CheckoutPage />} />
@@ -53,6 +58,7 @@ function App() {
           {/* Redirect unknown routes to home or a 404 page */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       </Suspense>
     </Router>
   );
