@@ -1,0 +1,1 @@
+import{h as c,p as u,j as t,P as e}from"./main-B7JSXPyK.js";const a=()=>{const{id:s}=c(),o=Number(s),r=u.find(d=>d.id===o);return r?t.jsx("div",{className:"product-page",children:t.jsx(e,{product:r})}):t.jsx("div",{children:"Product not found."})};export{a as default};
