@@ -4,7 +4,7 @@ import React from 'react';
 import './Footer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUp as faArrowUpSolid } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp as faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const Footer: React.FC = () => {
   // Scroll to top function
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
         onClick={scrollToTop}
         aria-label="Scroll to top"
       >
-        <FontAwesomeIcon icon={faArrowUpSolid} />
+        <FontAwesomeIcon icon={faChevronUp} />
       </button>
     </>
   );

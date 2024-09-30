@@ -1,87 +1,85 @@
-/* src/styles/themes.scss */
-
 /* Light Theme Variables */
 :root {
   /* Base Colors */
-  --background-color: #F7ECE1;          /* Light Cream */
-  --text-color: #1C1D21;                /* Dark Slate */
-  --heading-color: #1C1D21;             /* Dark Slate */
-  --primary-color: #3F5644;             /* Deep Olive */
-  --link-hover-color: #3F5644;          /* Deep Olive */
-  --error-color: #e53935;               /* Standard error color */
+  --background-color: #5e5e5e;          /* Light Ivory */
+  --text-color: #2B2B2B;                /* Dark Charcoal */
+  --heading-color: #2B2B2B;             /* Dark Charcoal */
+  --primary-color: #4A766E;             /* Soft Forest Green */
+  --link-hover-color: #4A766E;          /* Soft Forest Green */
+  --error-color: #D9534F;               /* Accessible error color (Slightly muted red) */
 
   /* Navigation */
   --nav-background-color: #FFFFFF;      /* White */
-  --nav-text-color: #1C1D21;            /* Dark Slate */
+  --nav-text-color: #2B2B2B;            /* Dark Charcoal */
   --nav-text-color-inverse: #FFFFFF;    /* White */
   --nav-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   /* Buttons */
-  --button-background-color: #3F5644;   /* Deep Olive */
-  --button-hover-color: #BDA580;        /* Warm Beige */
+  --button-background-color: #4A766E;   /* Soft Forest Green */
+  --button-hover-color: #A6B4AD;        /* Muted Light Sage */
   --button-text-color: #FFFFFF;         /* White */
 
   /* Inputs */
-  --input-border-color: #BDA580;        /* Warm Beige */
+  --input-border-color: #A6B4AD;        /* Muted Light Sage */
   --input-background-color: #FFFFFF;    /* White */
 
   /* Cards */
   --card-background-color: #FFFFFF;     /* White */
   --card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   --card-hover-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  --card-hover-background-color: #F7ECE1; /* Light Cream */
+  --card-hover-background-color: #FAF9F6; /* Light Ivory */
 
   /* Sections */
-  --section-background-color: #F7ECE1;  /* Light Cream */
+  --section-background-color: #FAF9F6;  /* Light Ivory */
 
   /* Footer */
-  --footer-background-color: #1C1D21;   /* Dark Slate */
+  --footer-background-color: #2B2B2B;   /* Dark Charcoal */
   --footer-text-color: #FFFFFF;         /* White */
 
   /* Hero Section */
-  --hero-overlay-color: rgba(28, 29, 33, 0.5); /* Dark Slate with opacity */
+  --hero-overlay-color: rgba(43, 43, 43, 0.5); /* Dark Charcoal with opacity */
   --hero-text-color: #FFFFFF;                  /* White */
 }
 
 /* Dark Theme Variables */
 [data-theme='dark'] {
   /* Base Colors */
-  --background-color: #1C1D21;           /* Dark Slate */
-  --text-color: #F7ECE1;                 /* Light Cream */
-  --heading-color: #F7ECE1;              /* Light Cream */
-  --primary-color: #3F5644;              /* Deep Olive (swapped) */
-  --link-hover-color: #3F5644;           /* Deep Olive (swapped) */
-  --error-color: #ef9a9a;                /* Adjusted error color */
+  --background-color: #1c1c1c;           /* Dark Charcoal */
+  --text-color: #FAF9F6;                 /* Light Ivory */
+  --heading-color: #FAF9F6;              /* Light Ivory */
+  --primary-color: #4A766E;              /* Soft Forest Green (swapped) */
+  --link-hover-color: #4A766E;           /* Soft Forest Green (swapped) */
+  --error-color: #E57373;                /* Adjusted error color (Soft Red) */
 
   /* Navigation */
-  --nav-background-color: #1C1D21;       /* Dark Slate */
-  --nav-text-color: #F7ECE1;             /* Light Cream */
-  --nav-text-color-inverse: #1C1D21;     /* Dark Slate */
+  --nav-background-color: #2B2B2B;       /* Dark Charcoal */
+  --nav-text-color: #FAF9F6;             /* Light Ivory */
+  --nav-text-color-inverse: #2B2B2B;     /* Dark Charcoal */
   --nav-box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 
   /* Buttons */
-  --button-background-color: #3F5644;    /* Deep Olive (swapped) */
-  --button-hover-color: #BDA580;         /* Warm Beige (swapped) */
-  --button-text-color: #F7ECE1;          /* Light Cream (adjusted for readability) */
+  --button-background-color: #4A766E;    /* Soft Forest Green */
+  --button-hover-color: #A6B4AD;         /* Muted Light Sage */
+  --button-text-color: #FAF9F6;          /* Light Ivory */
 
   /* Inputs */
-  --input-border-color: #BDA580;         /* Warm Beige (swapped) */
-  --input-background-color: #1C1D21;     /* Dark Slate */
+  --input-border-color: #A6B4AD;         /* Muted Light Sage */
+  --input-background-color: #2B2B2B;     /* Dark Charcoal */
 
   /* Cards */
-  --card-background-color: #292e2a;      /* Warm Beige (swapped) */
+  --card-background-color: #3C3C3C;      /* Dark Gray */
   --card-box-shadow: 0 4px 8px rgba(167, 167, 167, 0.1);
   --card-hover-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15);
-  --card-hover-background-color: #3F5644; /* Deep Olive (swapped) */
+  --card-hover-background-color: #4A766E; /* Soft Forest Green */
 
   /* Sections */
-  --section-background-color: #1C1D21;   /* Dark Slate */
+  --section-background-color: #2B2B2B;   /* Dark Charcoal */
 
   /* Footer */
-  --footer-background-color: #1C1D21;    /* Dark Slate */
-  --footer-text-color: #F7ECE1;          /* Light Cream */
+  --footer-background-color: #2B2B2B;    /* Dark Charcoal */
+  --footer-text-color: #FAF9F6;          /* Light Ivory */
 
   /* Hero Section */
   --hero-overlay-color: rgba(0, 0, 0, 0.7); /* Black with opacity */
-  --hero-text-color: #F7ECE1;               /* Light Cream */
+  --hero-text-color: #FAF9F6;               /* Light Ivory */
 }

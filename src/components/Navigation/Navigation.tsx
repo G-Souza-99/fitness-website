@@ -15,7 +15,7 @@ const Navigation: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 5) {
         setScrolling(true);
       } else {
         setScrolling(false);

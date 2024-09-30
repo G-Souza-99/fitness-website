@@ -9,6 +9,7 @@ import {
   faPlus,
   faMinus,
   faTrash,
+  faChevronUp
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
@@ -25,6 +26,7 @@ library.add(
   faPlus,
   faMinus,
   faTrash,
+  faChevronUp,
   faFacebook,
   faInstagram,
   faLinkedin
