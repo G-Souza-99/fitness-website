@@ -1,0 +1,55 @@
+/* src/components/InspiringMessagesSection/InspiringMessagesSection.scss */
+
+.inspiring-messages-section {
+  padding: 50px 0;
+  background-color: var(--primary-color);
+  opacity: 0.9;
+  color: var(--text-color);
+
+  .messages-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .message-card {
+    width: calc(33.333% - 40px);
+    margin: 10px;
+    text-align: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      background-color: black;
+      border-radius: 50%;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: var(--heading-color);
+    }
+
+    p {
+      font-size: 1rem;
+      color: var(--text-color);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .message-card {
+      width: calc(50% - 40px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .message-card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+}
